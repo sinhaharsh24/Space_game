@@ -1,8 +1,15 @@
 from cx_Freeze import setup, Executable
 
+# Dependencies (Optional: Add if needed)
+build_options = {
+    'packages': [],
+    'excludes': [],
+}
+
 setup(
     name="SpaceGame",
-    version="0.1",
-    description="It's a game version of space invaders",
-    executables=[Executable("SPACEGAME.py")]
+    version="1.0",
+    description="Space Game",
+    options={"build_exe": build_options},
+    executables=[Executable("SPACEGAME.py")]  # Replace with your main Python file name
 )
